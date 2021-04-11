@@ -141,10 +141,19 @@ spec:
             - secret:
                 name: {{ include "gitlab-runner.secret" . }}
                 items:
+                  {{- if not .Values.runnerRegistrationTokenSecret }}
                   - key: runner-registration-token
                     path: runner-registration-token
+                  {{- end }}
                   - key: runner-token
                     path: runner-token
+            {{- if .Values.runnerRegistrationTokenSecret }}
+            - secret:
+                name: {{ .Values.runnerRegistrationTokenSecret | quote }}
+                items:
+                  - key: {{ .Values.runnerRegistrationTokenSecretKey }}
+                    path: runner-registration-token
+            {{- end }}
 
             {{- range .Values.secrets }}
             - secret:
