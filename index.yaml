@@ -1,0 +1,24 @@
+apiVersion: v1
+entries:
+  gitlab-runner:
+  - apiVersion: v1
+    appVersion: 13.10.0
+    created: "2021-04-11T18:52:27.274741559Z"
+    description: GitLab Runner
+    digest: ff7321c6c4fd8d3cd05318e3953b41c9872302b4c60b953755c1eb1a01a85b09
+    icon: https://gitlab.com/uploads/-/system/project/avatar/250833/runner_logo.png
+    keywords:
+    - git
+    - ci
+    - deploy
+    maintainers:
+    - email: support@gitlab.com
+      name: GitLab Inc.
+    name: gitlab-runner
+    sources:
+    - https://hub.docker.com/r/gitlab/gitlab-runner/
+    - https://docs.gitlab.com/runner/
+    urls:
+    - https://github.com/skurtzemann/helm-charts/releases/download/gitlab-runner-0.28.0-beta/gitlab-runner-0.28.0-beta.tgz
+    version: 0.28.0-beta
+generated: "2021-04-11T18:52:27.274747359Z"
